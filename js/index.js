@@ -74,12 +74,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  search_input.addEventListener('keyup', () => {
+  search_input.addEventListener('keyup', (event) => {
     var val = search_input.value;
     if (val.length < 1) {
       userData = tempData;
     } else {
-      return;
+      if (event.code === "Enter") {
+        userData = searchBy(val);
+      } else {
+        return;
+      }
     }
     if (grid_btn.classList.contains('active')) {
       genGrid();

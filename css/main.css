@@ -164,6 +164,7 @@ body::-webkit-scrollbar {
 .search-wrapper span {
   font-size: 24px;
   padding: 8px 16px;
+  cursor: pointer;
   background: var(--primary);
   color: var(--bg_white);
   border-radius: 0px 30px 30px 0px;
